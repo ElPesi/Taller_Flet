@@ -1,7 +1,6 @@
 import flet as ft
 import mysql.connector
 
-# ---------- Conexión a la base de datos ----------
 def connect_to_db():
     try:
         connection = mysql.connector.connect(
@@ -21,7 +20,6 @@ def connect_to_db():
         return None
 
 
-# ---------- Clase principal para gestión de clientes ----------
 class Herramienta_Usuario:
     def __init__(self, page: ft.Page, main_menu_callback):
         self.page = page
@@ -40,11 +38,8 @@ class Herramienta_Usuario:
                 ft.dropdown.Option("direccion"),
                 ft.dropdown.Option("telefono"),
             ],
-            value="apellido",  # búsqueda por defecto
+            value="apellido", 
             width=200,
             on_change=self.search,
         )
         self.mostrar_cliente()
-
-
-    # ---------- Pantalla
