@@ -2,10 +2,6 @@ import flet as ft
 import mysql.connector            
 
 def connect_to_db():
-    """
-    Abre una conexión con la base de datos MySQL.
-    Centraliza la configuración de conexión.
-    """
     try:
         connection = mysql.connector.connect(
             host="localhost",      
